@@ -6,6 +6,7 @@
 
 # In short, you'll need to do the following for your project:
 ## Request app (where you AJAX call is located)
+
   //You'll need to have something like-so:
   $(function(){
     $.ajax({
@@ -28,6 +29,7 @@
 
 
 ## Response app (the server where you're sending a response back)
+
   //Inside of the controller you're AJAX is hitting
   //Add to top of controller
   skip_before_filter :verify_authenticity_token, :only => [:method_name]
