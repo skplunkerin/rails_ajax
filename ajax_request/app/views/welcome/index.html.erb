@@ -1,0 +1,22 @@
+<h1>Testing ajax request via CORS</h1>
+
+<script type="text/javascript">
+  $(function(){
+    $.ajax({
+      url:'http://127.0.0.1:3001/return_json', // Where to make request
+      type: 'POST', // HTTP method: "POST" or "GET"
+      data:{}, // Object with data to send to the server resource
+      dataType: 'jsonp', // Expected return data: xml, html, text, json, script, or jsonp
+      success: function(resp){ // Function triggered on successful ajax (with response data argument)
+        console.log('SUCCESS!!!');
+        console.log(resp);
+      },
+      error: function(){ // Function triggered on error or timeout
+        console.log('ERROR!!!');
+      },
+      complete: function(){ // Function always triggered after return
+        console.log('Completed');
+      }
+    });
+  });
+</script>
